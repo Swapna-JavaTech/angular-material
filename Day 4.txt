@@ -1,0 +1,143 @@
+Step1 : create a folder in any drive
+
+Step2 : open this folder in the command prompt
+
+Step3: check if angular installed or not
+
+Step4: If angular is installed execute following command to create new angular application
+
+ng new <appname>
+
+Ex: ng new onlineshoppingportal
+
+Step5: If angular not installed execute the following command to install angular 
+
+a) npm install @angular/cli 
+
+above command install angular latest version
+
+Then check if angular is installed or not using following command:
+
+b) ng --version
+
+Then execute following command to create new angular app
+
+c)ng new <appname>
+
+Ex: ng new onlineshoppingportal
+
+Step6: If angular project created
+
+move to the project folder
+
+cd <appname>
+
+Execute following command to run angular application
+
+ng serve
+
+Step7: check if application is successfully executed
+
+then open the application in any browser
+
+localhost:4200
+
+4200 - is the default port number used by angular application
+
+NodeJS is the server where angular application is deployed and executed
+
+Step8: IF port number 4200 not available use following command to execute angular app in
+different port number
+
+ng serve --port 4545
+
+
+Step8: remove all code from app.component.html
+
+add the following code and observe the changes
+
+<h1>Hello from App Component</h1>
+
+Step9: add following code to app.component.ts
+
+message = "Welcome...to angular training...";
+
+add the following code in app.component.html and observe the changes
+
+<h1>Hello from App Component</h1>
+<h1>{{message}}</h1>
+
+the above is the example of data binding from app.component.ts to app.component.html
+and it is called as String Interpolation an example of one-way data binding
+
+
+Step 10: adding bootstrap to angular application
+
+3 ways to add bootstrap to angular application
+
+1. add CDN links in index.html file
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+2. npm install bootstrap and update angular.json file 
+
+  "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
+            ],
+            "scripts": [
+              "./node_modules/bootstrap/dist/css/bootstrap.js",
+              "./node_modules/jquery/dist/jquery.js"
+            ]
+
+with following code
+
+3. npm install ng-bootstrap
+
+
+Angular Directives
+===================
+Structural Directives
+======================
+Structural Directives can change the DOM layout by adding or removing the DOM elements.
+All structural Directives are preceded by *.
+Examples:
+========
+ngFor
+ngSwitch
+ngIf
+
+Component Directive
+===================
+Example:
+========
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+Attribute Directive
+====================
+An attribute or style directive can change appearance and behaviour of DOM element.
+Example:
+========
+ngModel => is used for two way binding
+ngClass => is used to apply CSS classes to HTML element dynamically.
+Example:
+==========
+<div [ngClass] = "bg-home"></div>
+ngStyle => is used to apply style to HTML elements dynamically
+Example:
+==========
+<div [ngStyle] = {'color':'blue','font-size':20px}></div>
+
+Angular Directives Helps in manipulating the DOM
+
+Using Directives we can change
+
+behaviour
+layout
+of the component
